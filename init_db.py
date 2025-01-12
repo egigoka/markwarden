@@ -120,6 +120,7 @@ def get_db_version(db_path: Path) -> Optional[int]:
         print(f"Error getting database version: {e}")
         return None
 
+
 if __name__ == "__main__":
 
     from dotenv import load_dotenv
@@ -132,7 +133,7 @@ if __name__ == "__main__":
         db_path = None
 
     if not db_path:
-        print("copy .env.example and fill BOOKMARKS_DATABASE_PATH")
+        print("copy .env.example to .env and fill BOOKMARKS_DATABASE_PATH")
         sys.exit(1)
 
     version = get_db_version(db_path)
